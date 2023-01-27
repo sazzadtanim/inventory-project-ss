@@ -16,7 +16,7 @@ const Sidebar = () => {
 	]
 
 	return (
-		<nav className='bg-green-500'>
+		<nav className='bg-green-500 h-screen w-60'>
 			<h2 className='text-xl font-bold'>Dashboard</h2>
 			<ul>
 				{sideBarOptions.map((item, index) => (

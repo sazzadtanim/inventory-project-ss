@@ -19,8 +19,8 @@ const Sidebar = () => {
 		<div className="flex">
 			<div className="flex flex-col h-screen bg-cyan-900	 shadow w-60">
 				<div className="space-y-3">
-					<div className="flex items-center text-center">
-						<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="" />
+					<div className="flex items-center text-center p-3 mt-2">
+						<img className="rounded-full w-20 mr-3" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="" />
 						<h2 className="text-xl font-bold text-white ">User Name</h2>
 					</div>
 					<div className="flex-1">

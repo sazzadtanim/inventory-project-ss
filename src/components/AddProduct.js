@@ -414,7 +414,9 @@ const AddProduct = () => {
               id="product-img"
             />
           </div>
-       
+          <button class="bg-cyan-900 hover:bg-cyan-700 text-white font-bold py-2 px-2 w-full rounded">
+  Submit
+</button>
         </div>
       </div>
     </form>

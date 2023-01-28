@@ -15,7 +15,7 @@ const AddProduct = () => {
   ]
 
   const productBrand = [
-    {name:'Asus', name:'Dell', name:'Hp'}
+    {name:'Asus'}, {name:'Dell'}, {name:'Hp'}
   ]
 
   return (

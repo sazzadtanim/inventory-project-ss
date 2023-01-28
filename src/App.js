@@ -11,6 +11,7 @@ import Invoice from './components/Invoice'
 import AccountReview from './components/AccountReview'
 import Investment from './components/Investment'
 import Vendors from './components/Vendors'
+import AddProduct from './components/AddProduct'
 
 function App() {
 	return (
@@ -38,6 +39,7 @@ function App() {
 					></Route>
 					<Route path='/investment' element={<Investment></Investment>}></Route>
 					<Route path='/vendors' element={<Vendors></Vendors>}></Route>
+					<Route path='/add_product' element=<AddProduct />></Route>
 				</Routes>
 			</Router>
 		</div>

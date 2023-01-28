@@ -13,6 +13,7 @@ const Sidebar = () => {
 		{ name: 'Account Overview', url: '/acount-overview' },
 		{ name: 'Investment', url: '/investment' },
 		{ name: 'Vendors', url: '/vendors' },
+		{ name: 'AddProduct', url: '/add_product' },
 	]
 
 	return (

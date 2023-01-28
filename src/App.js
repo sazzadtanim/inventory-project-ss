@@ -12,6 +12,11 @@ import AccountReview from './components/AccountReview'
 import Investment from './components/Investment'
 import Vendors from './components/Vendors'
 
+
+
+
+
+
 function App() {
 	return (
 		<div className='flex'>

@@ -1,6 +1,11 @@
 import React from "react";
 
-const CustomerDetails = ( {clientsName,clientsAddress,clientsEmail,clientsPhone}) => {
+const CustomerDetails = ({
+  clientsName,
+  clientsAddress,
+  clientsEmail,
+  clientsPhone,
+}) => {
   return (
     <div>
       <div>
@@ -8,7 +13,9 @@ const CustomerDetails = ( {clientsName,clientsAddress,clientsEmail,clientsPhone}
       </div>
 
       <div>
-        <label htmlFor="clientsAddress">Clients Address:{clientsAddress} </label>
+        <label htmlFor="clientsAddress">
+          Clients Address:{clientsAddress}{" "}
+        </label>
       </div>
 
       <div>

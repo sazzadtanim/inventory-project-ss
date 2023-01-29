@@ -8,7 +8,6 @@ import InvoiceInputField from "./InvoiceInputField";
 import InvoiceTextArea from "./InvoiceTextArea";
 
 const Invoice = () => {
- 
   const [invoiceStatus, setInvoiceStatus] = useState(false);
   const [invoiceNumber, setInvoiceNumber] = useState("");
   const [clientsName, setClientsName] = useState("");

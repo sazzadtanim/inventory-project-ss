@@ -1,23 +1,26 @@
-import React from 'react';
-import CurrentDate from '../current_date_time/CurrentDate';
-import CurrentTime from '../current_date_time/CurrentTime';
-import InvoiceInputField from './InvoiceInputField';
+import React from "react";
+import CurrentDate from "../current_date_time/CurrentDate";
+import CurrentTime from "../current_date_time/CurrentTime";
 
-const InvoiceDetails = () => {
-    
-    return (
-        <div>
-            <label htmlFor="invoiceNumber">Invoice Number:</label>
-            <InvoiceInputField type='text' name='invoiceNumber' id='invoiceNumber' placeholder='Enter invoice Number'/>
+const InvoiceDetails = ({invoiceNumber}) => {
+   
+  return (
+    <div>
+      <div>
+        <label htmlFor="invoiceNumber">Invoice Number:{invoiceNumber}</label>
+      </div>
 
-            <label htmlFor="">Invoice Date:</label>
-            <CurrentDate/>
+      <div>
+        <label htmlFor="">Invoice Date:</label>
+        <CurrentDate />
+      </div>
 
-            <label htmlFor="">Invoice Time:</label>
-            <CurrentTime />
-            
-        </div>
-    );
+      <div>
+        <label htmlFor="">Invoice Time:</label>
+        <CurrentTime />
+      </div>
+    </div>
+  );
 };
 
 export default InvoiceDetails;

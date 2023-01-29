@@ -1,24 +1,25 @@
-import React from 'react';
-import InvoiceInputField from './InvoiceInputField';
-import InvoiceTextArea from './InvoiceTextArea';
+import React from "react";
 
-const CustomerDetails = () => {
-    return (
-        <div>
-            <label htmlFor="clientsName">Clients Name: </label>
-            <InvoiceInputField type='text' name='clientsName' id='clientsName' placeholder='Enter clients name'/>
+const CustomerDetails = ( {clientsName,clientsAddress,clientsEmail,clientsPhone}) => {
+  return (
+    <div>
+      <div>
+        <label htmlFor="clientsName">Clients Name:{clientsName} </label>
+      </div>
 
-            <label htmlFor="clientsAddress">Clients Address: </label>
-            <InvoiceTextArea type='text' name='clientsAddress' id='clientsAddress' placeholder='Enter clients address' />
+      <div>
+        <label htmlFor="clientsAddress">Clients Address:{clientsAddress} </label>
+      </div>
 
-            <label htmlFor="clientsEmail">Clients Email: </label>
-            <InvoiceInputField type='email' name='clientsEmail' id='clientsEmail' placeholder='Enter clients email'/>
+      <div>
+        <label htmlFor="clientsEmail">Clients Email:{clientsEmail} </label>
+      </div>
 
-            <label htmlFor="clientsPhone">Clients Phone: </label>
-            <InvoiceInputField type='text' name='clientsPhone' id='clientsPhone' placeholder='Enter clients phone number'/>      
-           
-        </div>
-    );
+      <div>
+        <label htmlFor="clientsPhone">Clients Phone: {clientsPhone}</label>
+      </div>
+    </div>
+  );
 };
 
 export default CustomerDetails;

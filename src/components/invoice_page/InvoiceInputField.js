@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const InvoiceInputField = ({type,name,id, placeholder}) => {
-  
-    return (
-        <div>
-            <input className='border border-solid border-gray-300' type={type} name={name} id={id}  placeholder={placeholder}/>
-        </div>
-     
-    );
+const InvoiceInputField = ({placeholder,id,value,type, setValue}) => {
+  return (
+    <div>
+      <input className="border border-solid border-gray-300" type={type} placeholder={placeholder} id={id} value={value} onChange={setValue}/>
+    </div>
+  );
 };
 
 export default InvoiceInputField;

@@ -12,7 +12,7 @@ const AddProduct = () => {
 
 					{InputList.map((item, index) =>
 						item.options ? (
-							<InputFieldWithOption />
+							<InputFieldWithOption key={index}/>
 						) : (
 							<ProductInputFeild
 								key={index}
@@ -27,7 +27,7 @@ const AddProduct = () => {
 					{/* button */}
 
 					<button
-						class='bg-cyan-900 hover:bg-cyan-700
+						className='bg-cyan-900 hover:bg-cyan-700
 					 text-white font-bold py-2 px-2 w-full rounded'
 					>
 						Submit

@@ -7,10 +7,10 @@ import Orders from './components/Orders'
 import MoneyCollection from './components/MoneyCollection'
 import Cost from './components/Cost'
 import Capital from './components/Capital'
-import Invoice from './components/Invoice'
 import AccountReview from './components/AccountReview'
 import Investment from './components/Investment'
 import Vendors from './components/Vendors'
+import Invoice from './components/invoice_page/Invoice'
 
 
 

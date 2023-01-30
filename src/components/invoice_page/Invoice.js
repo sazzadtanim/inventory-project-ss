@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { create } from "zustand";
+
 import CompanyDetails from "./CompanyDetails";
 import CustomerDetails from "./CustomerDetails";
 import InvoiceDetails from "./InvoiceDetails";
+
 import InvoiceHeader from "./InvoiceHeader";
-import InvoiceInputField from "./InvoiceInputField";
-import InvoiceTextArea from "./InvoiceTextArea";
+import InvoiceInputForm from "./InvoiceInputForm";
+import ProductTable from "./ProductTable";
+import ProductTableForm from "./ProductTableForm";
 
 const Invoice = () => {
   const [invoiceStatus, setInvoiceStatus] = useState(false);
@@ -14,11 +16,16 @@ const Invoice = () => {
   const [clientsAddress, setClientsAddress] = useState("");
   const [clientsEmail, setClientsEmail] = useState("");
   const [clientsPhone, setClientsPhone] = useState("");
+  const [productName, setProductName] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [price, setPrice] = useState("");
+  const [amount, setAmount] = useState("");
+  const [productList, setProductList] = useState([]);
 
   return (
     <div>
       {invoiceStatus ? (
-        <>
+        <section>
           <InvoiceHeader />
           <h1>INVOICE</h1>
 
@@ -31,52 +38,35 @@ const Invoice = () => {
           />
 
           <InvoiceDetails invoiceNumber={invoiceNumber} />
+          <ProductTable productList={productList} />
           <button
             className="bg-black text-white"
             onClick={() => setInvoiceStatus(!invoiceStatus)}
           >
             Edit Information
           </button>
-        </>
+        </section>
       ) : (
-        <>
-          <InvoiceInputField
-            placeholder="Enter clients name"
-            type="text"
-            id="clientsName"
-            value={clientsName}
-            setValue={(e) => setClientsName(e.target.value)}
+        <section>
+          <InvoiceInputForm
+            setInvoiceNumber={setInvoiceNumber}
+            setClientsName={setClientsName}
+            setClientsAddress={setClientsAddress}
+            setClientsEmail={setClientsEmail}
+            setClientsPhone={setClientsPhone}
           />
 
-          <InvoiceTextArea
-            placeholder="Enter clients address"
-            type="text"
-            id="clientsAddress"
-            value={clientsAddress}
-            setValue={(e) => setClientsAddress(e.target.value)}
-          />
-          <InvoiceInputField
-            placeholder="Enter clients email"
-            type="email"
-            id="clientsEmail"
-            value={clientsEmail}
-            setValue={(e) => setClientsEmail(e.target.value)}
-          />
-
-          <InvoiceInputField
-            placeholder="Enter clients phone number"
-            type="text"
-            id="clientsPhone"
-            value={clientsPhone}
-            setValue={(e) => setClientsPhone(e.target.value)}
-          />
-
-          <InvoiceInputField
-            placeholder="Enter invoice number"
-            type="text"
-            id="invoiceNumber"
-            value={invoiceNumber}
-            setValue={(e) => setInvoiceNumber(e.target.value)}
+          <ProductTableForm
+            productName={productName}
+            setProductName={setProductName}
+            quantity={quantity}
+            setQuantity={setQuantity}
+            price={price}
+            setPrice={setPrice}
+            amount={amount}
+            setAmount={setAmount}
+            productList={productList}
+            setProductList={setProductList}
           />
 
           <button
@@ -85,7 +75,7 @@ const Invoice = () => {
           >
             Create Invoice
           </button>
-        </>
+        </section>
       )}
     </div>
   );

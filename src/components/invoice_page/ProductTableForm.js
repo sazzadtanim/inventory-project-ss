@@ -17,7 +17,7 @@ const ProductTableForm = ({
 }) => {
   useEffect(() => {
     setAmount((quantity * price).toFixed(2));
-  }, [quantity, price]);
+  }, [quantity, price, setAmount]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

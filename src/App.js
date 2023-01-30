@@ -11,11 +11,7 @@ import AccountReview from './components/AccountReview'
 import Investment from './components/Investment'
 import Vendors from './components/Vendors'
 import Invoice from './components/invoice_page/Invoice'
-
-
-
-
-
+import SazzadInvoice from './SazzadInvoice'
 
 function App() {
 	return (
@@ -23,7 +19,7 @@ function App() {
 			<Router>
 				<Sidebar></Sidebar>
 				<Routes>
-					<Route path='/' element={<Dashboard></Dashboard>}></Route>
+					<Route path='/' element={<SazzadInvoice />}></Route>
 					<Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
 					<Route
 						path='/all-products'
@@ -43,6 +39,7 @@ function App() {
 					></Route>
 					<Route path='/investment' element={<Investment></Investment>}></Route>
 					<Route path='/vendors' element={<Vendors></Vendors>}></Route>
+					<Route path='/sazzad_invoice' element={<SazzadInvoice />}></Route>
 				</Routes>
 			</Router>
 		</div>

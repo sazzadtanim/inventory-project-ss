@@ -11,7 +11,7 @@ const Orders = () => {
     fetch("https://fakestoreapi.com/users")
       .then((response) => response.json())
       .then((data) => setFakeInformation(data));
-  });
+  }, []);
   return (
     <section>
       <div className="search-customer">

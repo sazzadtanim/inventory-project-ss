@@ -12,6 +12,7 @@ import Vendors from "./components/Vendors";
 import Invoice from "./components/invoice_page/Invoice";
 import AllProducts from "./components/all_product-page/AllProducts";
 import Orders from "./components/order_page/Orders";
+import SazzadInvoice from "./SazzadInvoice";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           ></Route>
           <Route path="/investment" element={<Investment></Investment>}></Route>
           <Route path="/vendors" element={<Vendors></Vendors>}></Route>
+          <Route path="/sazzad_invoice" element={<SazzadInvoice />}></Route>
         </Routes>
       </Router>
     </div>

@@ -1,9 +1,15 @@
 import React from "react";
 
-const SearchOptionBox = ({ value, name }) => {
+const SearchOptionBox = () => {
   return (
     <>
-      <option value={value}>{name}</option>
+      <option value="select-an-option" selected>
+        Select an option
+      </option>
+      <option value="name">Name</option>
+      <option value="sku">SKU</option>
+      <option value="productId">Product ID</option>
+      <option value="category">Category</option>
     </>
   );
 };

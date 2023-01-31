@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductTable = () => {
   return (
-    <table className="w-100">
+    <table>
       <thead>
         <tr>
           <th>Product</th>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ProductSearchOptionList } from "../../jsonData/SearchOptionList";
 import AllProductTableHead from "./AllProductTableHead";
 import AllProductTableRow from "./AllProductTableRow";
 import SearchBox from "./SearchBox";
@@ -19,7 +20,16 @@ const AllProducts = () => {
         <SearchBox type="text" placeholder="Type to search" />
 
         <select>
-          <SearchOptionBox />
+          <option value="select-an-option" selected>
+            Select an option
+          </option>
+          {ProductSearchOptionList.map((option, index) => (
+            <SearchOptionBox
+              key={index}
+              value={option.value}
+              name={option.name}
+            />
+          ))}
         </select>
         <SearchButton />
       </div>

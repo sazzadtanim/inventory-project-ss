@@ -2,7 +2,7 @@ import Sidebar from "./components/Sidebar";
 
 import Dashboard from "./components/Dashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AllProducts from "./components/AllProducts";
+
 import Orders from "./components/Orders";
 import MoneyCollection from "./components/MoneyCollection";
 import Cost from "./components/Cost";
@@ -11,6 +11,7 @@ import AccountReview from "./components/AccountReview";
 import Investment from "./components/Investment";
 import Vendors from "./components/Vendors";
 import Invoice from "./components/invoice_page/Invoice";
+import AllProducts from "./components/all_product-page/AllProducts";
 
 function App() {
   return (
@@ -20,10 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard></Dashboard>}></Route>
           <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
-          <Route
-            path="/all-products"
-            element={<AllProducts></AllProducts>}
-          ></Route>
+          <Route path="/all-products" element={<AllProducts />}></Route>
           <Route path="/orders" element={<Orders></Orders>}></Route>
           <Route
             path="/money-collection"

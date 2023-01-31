@@ -4,11 +4,11 @@ import { currentDate } from "../current_date_time/CurrentDate";
 const InvoiceDetailsInformation = () => {
   return (
     <>
-      <div>
+      <div className="flex flex-col">
         <label htmlFor="billNo"> BILL NO</label>
         <input type="text" placeholder="Bill number" id="billNo" />
       </div>
-      <div>
+      <div className="flex flex-col">
         <label htmlFor="invoiceNo">INVOICE NO</label>
         <input type="text" placeholder="Invoice Number" id="invoiceNo" />
       </div>

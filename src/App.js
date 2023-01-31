@@ -3,7 +3,6 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Orders from "./components/Orders";
 import MoneyCollection from "./components/MoneyCollection";
 import Cost from "./components/Cost";
 import Capital from "./components/Capital";
@@ -12,6 +11,7 @@ import Investment from "./components/Investment";
 import Vendors from "./components/Vendors";
 import Invoice from "./components/invoice_page/Invoice";
 import AllProducts from "./components/all_product-page/AllProducts";
+import Orders from "./components/order_page/Orders";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Dashboard></Dashboard>}></Route>
           <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
           <Route path="/all-products" element={<AllProducts />}></Route>
-          <Route path="/orders" element={<Orders></Orders>}></Route>
+          <Route path="/orders" element={<Orders />}></Route>
           <Route
             path="/money-collection"
             element={<MoneyCollection></MoneyCollection>}

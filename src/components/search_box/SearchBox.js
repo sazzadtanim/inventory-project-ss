@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchBox = ({ type, placeholder }) => {
+const SearchBox = () => {
   return (
     <input
       type="text"

@@ -25,9 +25,7 @@ const AllProducts = () => {
       </div>
       <table className="border border-solid border-black">
         <thead className="w-screen">
-          <tr className="bg-gray-400">
-            <AllProductTableHead />
-          </tr>
+          <AllProductTableHead />
         </thead>
         <tbody>
           {products.map((product, index) => (

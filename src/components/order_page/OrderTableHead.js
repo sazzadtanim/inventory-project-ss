@@ -2,22 +2,22 @@ import React from "react";
 
 const OrderTableHead = () => {
   return (
-    <tr className="bg-gray-400">
-      <th>SELLING DATE</th>
-      <th>INVOICE NUMBER</th>
-      <th>PRODUCT NAME</th>
-      <th>SKU</th>
-      <th>CUSTOMER NAME</th>
-      <th>CUSTOMER MOBILE</th>
-      <th>CUSTOMER EMAIL</th>
-      <th>CUSTOMER ADDRESS</th>
-      <th>PRODUCT PRICE</th>
-      <th>COURIER</th>
-      <th>COURIER CHARGE</th>
-      <th>MONEY RECEIVED</th>
-      <th>TOTAL DUE</th>
-      <th>COURIER NAME</th>
-      <th>REMARKS</th>
+    <tr className="bg-gray-400 text-white font-bold">
+      <th className="px-4 py-2">SELLING DATE</th>
+      <th className="px-4 py-2">INVOICE NUMBER</th>
+      <th className="px-4 py-2">PRODUCT NAME</th>
+      <th className="px-4 py-2">SKU</th>
+      <th className="px-4 py-2">CUSTOMER NAME</th>
+      <th className="px-4 py-2">CUSTOMER MOBILE</th>
+      <th className="px-4 py-2">CUSTOMER EMAIL</th>
+      <th className="px-4 py-2">CUSTOMER ADDRESS</th>
+      <th className="px-4 py-2">PRODUCT PRICE</th>
+      <th className="px-4 py-2">COURIER</th>
+      <th className="px-4 py-2">COURIER CHARGE</th>
+      <th className="px-4 py-2">MONEY RECEIVED</th>
+      <th className="px-4 py-2">TOTAL DUE</th>
+      <th className="px-4 py-2">COURIER NAME</th>
+      <th className="px-4 py-2">REMARKS</th>
     </tr>
   );
 };

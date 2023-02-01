@@ -4,22 +4,26 @@ const OrderTableRow = (props) => {
   const { address, id, email, username, name, phone, password } =
     props.information;
   return (
-    <tr>
-      <td>{phone}</td>
-      <td>{id}</td>
-      <td>{name.firstname + " " + name.lastname}</td>
-      <td>{username}</td>
-      <td>{name.firstname + " " + name.lastname}</td>
-      <td>{phone}</td>
-      <td>{email}</td>
-      <td>{address.city}</td>
-      <td>{address.number}</td>
-      <td>{username}</td>
-      <td>{address.number}</td>
-      <td>{address.number}</td>
-      <td>{address.number}</td>
-      <td>{name.lastname}</td>
-      <td>{password}</td>
+    <tr className="text-gray-800">
+      <td className="px-4 py-2 border border-gray-400">{phone}</td>
+      <td className="px-4 py-2 border border-gray-400">{id}</td>
+      <td className="px-4 py-2 border border-gray-400">
+        {name.firstname + " " + name.lastname}
+      </td>
+      <td className="px-4 py-2 border border-gray-400">{username}</td>
+      <td className="px-4 py-2 border border-gray-400">
+        {name.firstname + " " + name.lastname}
+      </td>
+      <td className="px-4 py-2 border border-gray-400">{phone}</td>
+      <td className="px-4 py-2 border border-gray-400">{email}</td>
+      <td className="px-4 py-2 border border-gray-400">{address.city}</td>
+      <td className="px-4 py-2 border border-gray-400">{address.number}</td>
+      <td className="px-4 py-2 border border-gray-400">{username}</td>
+      <td className="px-4 py-2 border border-gray-400">{address.number}</td>
+      <td className="px-4 py-2 border border-gray-400">{address.number}</td>
+      <td className="px-4 py-2 border border-gray-400">{address.number}</td>
+      <td className="px-4 py-2 border border-gray-400">{name.lastname}</td>
+      <td className="px-4 py-2 border border-gray-400">{password}</td>
     </tr>
   );
 };

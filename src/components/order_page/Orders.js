@@ -13,17 +13,17 @@ const Orders = () => {
       .then((data) => setFakeInformation(data));
   }, []);
   return (
-    <section>
-      <div className="search-customer">
+    <section className="flex flex-col p-4">
+      <div className="flex justify-between items-center mb-4">
         <SearchBox />
-        <select>
+        <select className="bg-white border border-gray-400 rounded py-2 px-4">
           <OrdersSerachOption />
         </select>
         <SearchButton />
       </div>
-      <div className="order-table">
-        <table className="border border-solid border-gray">
-          <thead className="w-screen">
+      <div className="border border-gray-400">
+        <table className="w-full">
+          <thead className="bg-gray-200">
             <OrderTableHead />
           </thead>
           <tbody>

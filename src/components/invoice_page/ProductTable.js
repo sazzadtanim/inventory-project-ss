@@ -1,69 +1,36 @@
-import React from "react";
+import React, { useState } from 'react';
+import InvoiceTableRow from './InvoiceTableRow';
 
 const ProductTable = () => {
+  const [tableRow, setTableRow] = useState([{}]);
+
+  const addRow = () => {
+    setTableRow([...tableRow, {}]);
+  };
+  const removeRow = (index) => {
+    setTableRow(tableRow.filter((_, i) => i !== index));
+  };
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Unit Price</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody className="border-b border-black">
-        <tr>
-          <td>
-            <input
-              className="border border-solid border-gray"
-              type="text"
-              placeholder="Product name"
-            />
-          </td>
-          <td>
-            <input
-              className="border border-solid border-gray"
-              type="text"
-              placeholder="Price"
-            />
-          </td>
-          <td>
-            <input
-              className="border border-solid border-gray"
-              type="number"
-              placeholder="Quantity"
-            />
-          </td>
-          <td>500</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>Sub Total:</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>Discount:</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>Tax:</td>
-          <td>1000</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>Total Value</td>
-          <td>5000</td>
-        </tr>
-      </tfoot>
-    </table>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td>Product</td>
+            <td>Quantity</td>
+            <td>Unit Price</td>
+            <td>Amount</td>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRow.map((row, index) => (
+            <InvoiceTableRow key={index} index={index} removeRow={removeRow} />
+          ))}
+        </tbody>
+      </table>
+      <button className='bg-black text-white' onClick={addRow}>
+        Add Product
+      </button>
+    </div>
   );
 };
 

@@ -1,5 +1,3 @@
-import Sidebar from "./components/Sidebar";
-
 import Dashboard from "./components/Dashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -18,7 +16,7 @@ function App() {
   return (
     <div className="flex">
       <Router>
-        <Sidebar></Sidebar>
+        {/* <Sidebar></Sidebar> */}
         <Routes>
           <Route path="/" element={<Dashboard></Dashboard>}></Route>
           <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
